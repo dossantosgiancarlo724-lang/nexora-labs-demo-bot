@@ -1,0 +1,6 @@
+{
+  "sections": {
+    "main": {"type":"nexora-product","settings":{}}
+  },
+  "order":["main"]
+}

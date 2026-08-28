@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Nexora",
+    "settings": [
+      {"type":"text","id":"announcement","label":"Announcement","default":"Complimentary shipping on orders over €75"},
+      {"type":"color","id":"accent","label":"Accent","default":"#111111"}
+    ]
+  }
+]

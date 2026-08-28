@@ -7,6 +7,7 @@
     <title>{{ page_title | escape }}{% unless page_title contains 'Nexora' %} · NEXORA{% endunless %}</title>
     {{ content_for_header }}
     {{ 'nexora.css' | asset_url | stylesheet_tag }}
+    {{ 'nexora-fixes.css' | asset_url | stylesheet_tag }}
     <style>
       .nx-motion-item{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) var(--nx-delay,0ms),transform .8s cubic-bezier(.2,.7,.2,1) var(--nx-delay,0ms)}
       .nx-motion-item.nx-visible{opacity:1;transform:none}

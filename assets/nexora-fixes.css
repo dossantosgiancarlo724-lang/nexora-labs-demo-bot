@@ -1,0 +1,10 @@
+/* Nexora stability overrides */
+.nx-cursor-glow,.nx-cursor-ring{display:none!important}
+body{cursor:default}
+button,a,summary{cursor:pointer}
+img{max-width:100%;}
+.nx-media img,.nx-editorial-image img,.nx-hero-image{opacity:1!important}
+.nx-media img.nx-image-enhanced{opacity:1!important}
+.nx-hero-visual,.nx-media,.nx-editorial-image{will-change:transform}
+@media (max-width:600px){.nx-cursor-glow,.nx-cursor-ring{display:none!important}.nx-hero-visual,.nx-media,.nx-editorial-image{transform:none!important}}
+@media (prefers-reduced-motion:reduce){.nx-orb-a,.nx-orb-b,.nx-announcement:after,.nx-newsletter-box:before,.nx-reviews:before{animation:none!important}.nx-cursor-glow,.nx-cursor-ring{display:none!important}}

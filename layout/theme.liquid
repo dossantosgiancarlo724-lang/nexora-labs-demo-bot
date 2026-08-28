@@ -7,17 +7,20 @@
     <title>{{ page_title | escape }}{% unless page_title contains 'Nexora' %} · NEXORA{% endunless %}</title>
     {{ content_for_header }}
     {{ 'nexora.css' | asset_url | stylesheet_tag }}
+    <style>
+      .nx-motion-item{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) var(--nx-delay,0ms),transform .8s cubic-bezier(.2,.7,.2,1) var(--nx-delay,0ms)}
+      .nx-motion-item.nx-visible{opacity:1;transform:none}
+      .site-header{transition:box-shadow .35s,background .35s}
+      .site-header.nx-header-scrolled{box-shadow:0 8px 30px rgba(0,0,0,.08)}
+      @media (prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.nx-motion-item{opacity:1!important;transform:none!important}}
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="{{ routes.root_url }}" aria-label="Nexora home"><span class="brand-mark">N</span><span>NEXORA</span></a>
-        <nav class="main-nav" aria-label="Primary">
-          <a href="{{ routes.collections_url }}">Shop</a>
-          <a href="{{ routes.search_url }}">Search</a>
-          <a class="nav-cart" href="{{ routes.cart_url }}">Bag <span class="cart-count">{{ cart.item_count }}</span></a>
-        </nav>
+        <nav class="main-nav" aria-label="Primary"><a href="{{ routes.collections_url }}">Shop</a><a href="{{ routes.search_url }}">Search</a><a class="nav-cart" href="{{ routes.cart_url }}">Bag <span class="cart-count">{{ cart.item_count }}</span></a></nav>
       </div>
     </header>
     <main id="main-content">{{ content_for_layout }}</main>
@@ -25,5 +28,6 @@
       <div class="container footer-top"><div><a class="footer-brand" href="{{ routes.root_url }}">NEXORA<span>®</span></a><p>Objects, ideas and everyday essentials — selected for the next move.</p></div><div class="footer-links"><a href="{{ routes.collections_url }}">Shop</a><a href="{{ routes.search_url }}">Search</a><a href="{{ routes.cart_url }}">Bag</a></div></div>
       <div class="container footer-bottom"><span>NEXORA LABS · DEMO PROJECT</span><span>REAL SHOPIFY STOREFRONT · 2026</span></div>
     </footer>
+    <script src="{{ 'nexora-motion.js' | asset_url }}" defer></script>
   </body>
 </html>

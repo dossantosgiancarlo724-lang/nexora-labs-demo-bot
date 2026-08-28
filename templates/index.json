@@ -2,13 +2,17 @@
   "sections": {
     "announcement": {"type":"nexora-announcement","settings":{}},
     "hero": {"type":"nexora-hero","settings":{}},
+    "marquee": {"type":"nexora-marquee","settings":{}},
     "categories": {"type":"nexora-categories","settings":{}},
     "featured": {"type":"nexora-featured-products","settings":{"title":"The edit of the season"}},
+    "showcase": {"type":"nexora-showcase","settings":{}},
     "editorial": {"type":"nexora-editorial","settings":{}},
+    "stats": {"type":"nexora-stats","settings":{}},
+    "services": {"type":"nexora-services","settings":{}},
     "benefits": {"type":"nexora-benefits","settings":{}},
     "reviews": {"type":"nexora-reviews","settings":{}},
     "faq": {"type":"nexora-faq","settings":{}},
     "newsletter": {"type":"nexora-newsletter","settings":{}}
   },
-  "order": ["announcement","hero","categories","featured","editorial","benefits","reviews","faq","newsletter"]
+  "order": ["announcement","hero","marquee","categories","featured","showcase","editorial","stats","services","benefits","reviews","faq","newsletter"]
 }

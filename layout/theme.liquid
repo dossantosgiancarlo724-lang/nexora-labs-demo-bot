@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page_title | escape }}</title>
+    <meta name="description" content="Nexora — a premium Shopify commerce concept by Nexora Labs.">
+    <title>{{ page_title | escape }}{% unless page_title contains 'Nexora' %} · NEXORA{% endunless %}</title>
     {{ content_for_header }}
     {{ 'nexora.css' | asset_url | stylesheet_tag }}
   </head>
@@ -11,25 +12,18 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="{{ routes.root_url }}" aria-label="Nexora home">
-          <span class="brand-mark">N</span>
-          <span>NEXORA</span>
-        </a>
+        <a class="brand" href="{{ routes.root_url }}" aria-label="Nexora home"><span class="brand-mark">N</span><span>NEXORA</span></a>
         <nav class="main-nav" aria-label="Primary">
           <a href="{{ routes.collections_url }}">Shop</a>
           <a href="{{ routes.search_url }}">Search</a>
-          <a href="{{ routes.cart_url }}">Cart <span class="cart-count">{{ cart.item_count }}</span></a>
+          <a class="nav-cart" href="{{ routes.cart_url }}">Bag <span class="cart-count">{{ cart.item_count }}</span></a>
         </nav>
       </div>
     </header>
-    <main id="main-content">
-      {{ content_for_layout }}
-    </main>
+    <main id="main-content">{{ content_for_layout }}</main>
     <footer class="site-footer">
-      <div class="container footer-grid">
-        <div><strong>NEXORA LABS</strong><p>Digital commerce, designed for the next move.</p></div>
-        <div><span class="eyebrow">DEMO PROJECT</span><p>Built as a real Shopify storefront concept.</p></div>
-      </div>
+      <div class="container footer-top"><div><a class="footer-brand" href="{{ routes.root_url }}">NEXORA<span>®</span></a><p>Objects, ideas and everyday essentials — selected for the next move.</p></div><div class="footer-links"><a href="{{ routes.collections_url }}">Shop</a><a href="{{ routes.search_url }}">Search</a><a href="{{ routes.cart_url }}">Bag</a></div></div>
+      <div class="container footer-bottom"><span>NEXORA LABS · DEMO PROJECT</span><span>REAL SHOPIFY STOREFRONT · 2026</span></div>
     </footer>
   </body>
 </html>

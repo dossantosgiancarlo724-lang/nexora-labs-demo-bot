@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "hero": {
+      "type": "nexora-hero",
+      "settings": {}
+    },
+    "featured": {
+      "type": "nexora-featured-products",
+      "settings": {"title":"Curated for the next move"}
+    },
+    "value": {
+      "type": "nexora-value-strip",
+      "settings": {}
+    }
+  },
+  "order": ["hero","featured","value"]
+}
